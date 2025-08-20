@@ -35,10 +35,36 @@ export default function Home() {
   ];
 
   const certifications = [
-    "Basics of Python – Infosys Springboard (Feb 2024)",
-    "Python Fundamentals – Infosys Springboard (Jun–Jul 2024)",
-    "VLSI Digital Design – Infosys Springboard (Mar–Apr 2025)",
-    "Explore Machine Learning Using Python – Infosys Springboard (May 2025)",
+    {
+      title: "Time Management",
+      file: "/certificates/Time Management.pdf",
+      date: "Feb 2024",
+    },
+    {
+      title: "Basics of Python – Infosys Springboard",
+      file: "/certificates/Basics of Python.pdf",
+      date: "Feb 2024",
+    },
+    {
+      title: "Python Fundamentals – Infosys Springboard",
+      file: "/certificates/Python Fundamentals.pdf",
+      date: "Jul 2024",
+    },
+    {
+      title: "TypeScript",
+      file: "/certificates/TypeScript.pdf",
+      date: "Dec 2024",
+    },
+    {
+      title: "VLSI Digital Design – Infosys Springboard",
+      file: "/certificates/VLSI Digital Design - Chip Design and Verilog Programming.pdf",
+      date: "Apr 2025",
+    },
+    {
+      title: "Explore Machine Learning Using Python – Infosys Springboard",
+      file: "/certificates/Explore Machine Learning using Python.pdf",
+      date: "May 2025",
+    },
   ];
 
   const education = [
@@ -183,13 +209,21 @@ export default function Home() {
       {/* CERTIFICATIONS */}
       <section id="certifications" className="max-w-6xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2">Certifications</h2>
-        <ul className="mt-6 space-y-3 text-gray-300">
-          {certifications.map(c => (
-            <li key={c} className="flex items-center gap-2">
-              <span className="text-blue-400">✔</span> {c}
-            </li>
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {certifications.map((c) => (
+            <a
+              key={c.title}
+              href={c.file}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block p-5 rounded-xl border border-gray-700 bg-gray-900 hover:shadow-lg hover:shadow-blue-500/20 transition"
+            >
+              <h3 className="text-lg font-medium text-white">{c.title}</h3>
+              <p className="text-sm text-gray-400">{c.date}</p>
+              <p className="mt-2 text-blue-400 underline">View Certificate →</p>
+            </a>
           ))}
-        </ul>
+        </div>
       </section>
 
       {/* CONTACT */}
