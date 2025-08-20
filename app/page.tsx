@@ -54,7 +54,9 @@ export default function Home() {
       {/* NAV */}
       <header className="sticky top-0 bg-gray-900/80 backdrop-blur-md border-b border-gray-700 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="font-bold text-xl text-white">G Saikumar</Link>
+          <Link href="/" className="font-bold text-xl text-white">
+            G Saikumar
+          </Link>
           <nav className="flex gap-6 text-sm font-medium">
             <Link href="#projects" className="hover:text-blue-400">Projects</Link>
             <Link href="#skills" className="hover:text-blue-400">Skills</Link>
