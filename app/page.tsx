@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   const projects = [
     {
@@ -52,13 +54,13 @@ export default function Home() {
       {/* NAV */}
       <header className="sticky top-0 bg-gray-900/80 backdrop-blur-md border-b border-gray-700 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/" className="font-bold text-xl text-white">G Saikumar</a>
+          <Link href="/" className="font-bold text-xl text-white">G Saikumar</Link>
           <nav className="flex gap-6 text-sm font-medium">
-            <a href="#projects" className="hover:text-blue-400">Projects</a>
-            <a href="#skills" className="hover:text-blue-400">Skills</a>
-            <a href="#education" className="hover:text-blue-400">Education</a>
-            <a href="#certifications" className="hover:text-blue-400">Certifications</a>
-            <a href="#contact" className="hover:text-blue-400">Contact</a>
+            <Link href="#projects" className="hover:text-blue-400">Projects</Link>
+            <Link href="#skills" className="hover:text-blue-400">Skills</Link>
+            <Link href="#education" className="hover:text-blue-400">Education</Link>
+            <Link href="#certifications" className="hover:text-blue-400">Certifications</Link>
+            <Link href="#contact" className="hover:text-blue-400">Contact</Link>
           </nav>
         </div>
       </header>
@@ -75,8 +77,8 @@ export default function Home() {
           eager to contribute to impactful projects.
         </p>
         <div className="mt-8 flex gap-4 flex-wrap justify-center">
-          <a href="#projects" className="px-6 py-3 rounded-xl bg-blue-500 text-white hover:bg-blue-600">View Projects</a>
-          <a href="/resume.pdf" className="px-6 py-3 rounded-xl border border-gray-600 hover:bg-gray-800">Download Resume</a>
+          <Link href="#projects" className="px-6 py-3 rounded-xl bg-blue-500 text-white hover:bg-blue-600">View Projects</Link>
+          <Link href="/resume.pdf" className="px-6 py-3 rounded-xl border border-gray-600 hover:bg-gray-800">Download Resume</Link>
           <a href="http://www.linkedin.com/in/sai-kumar-b6a3142a6" target="_blank" className="px-6 py-3 rounded-xl border border-gray-600 hover:bg-gray-800">LinkedIn</a>
           <a href="https://github.com/21Saikumar" target="_blank" className="px-6 py-3 rounded-xl border border-gray-600 hover:bg-gray-800">GitHub</a>
         </div>
