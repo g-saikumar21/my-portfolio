@@ -77,10 +77,26 @@ export default function Home() {
           eager to contribute to impactful projects.
         </p>
         <div className="mt-8 flex gap-4 flex-wrap justify-center">
-          <Link href="#projects" className="px-6 py-3 rounded-xl bg-blue-500 text-white hover:bg-blue-600">View Projects</Link>
-          <Link href="/resume.pdf" className="px-6 py-3 rounded-xl border border-gray-600 hover:bg-gray-800">Download Resume</Link>
-          <a href="http://www.linkedin.com/in/sai-kumar-b6a3142a6" target="_blank" className="px-6 py-3 rounded-xl border border-gray-600 hover:bg-gray-800">LinkedIn</a>
-          <a href="https://github.com/21Saikumar" target="_blank" className="px-6 py-3 rounded-xl border border-gray-600 hover:bg-gray-800">GitHub</a>
+          <Link href="#projects" className="px-6 py-3 rounded-xl bg-blue-500 text-white hover:bg-blue-600">
+            View Projects
+          </Link>
+          <Link href="/resume.pdf" className="px-6 py-3 rounded-xl border border-gray-600 hover:bg-gray-800">
+            Download Resume
+          </Link>
+          <a
+            href="http://www.linkedin.com/in/sai-kumar-b6a3142a6"
+            target="_blank"
+            className="px-6 py-3 rounded-xl border border-gray-600 hover:bg-gray-800"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/21Saikumar"
+            target="_blank"
+            className="px-6 py-3 rounded-xl border border-gray-600 hover:bg-gray-800"
+          >
+            GitHub
+          </a>
         </div>
       </section>
 
@@ -89,7 +105,12 @@ export default function Home() {
         <h2 className="text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2">Projects</h2>
         <div className="mt-8 grid md:grid-cols-2 gap-8">
           {projects.map(p => (
-            <a key={p.title} href={p.link} target="_blank" className="block rounded-xl p-6 border border-gray-700 bg-gray-800 hover:shadow-xl hover:shadow-blue-500/20 transition">
+            <a
+              key={p.title}
+              href={p.link}
+              target="_blank"
+              className="block rounded-xl p-6 border border-gray-700 bg-gray-800 hover:shadow-xl hover:shadow-blue-500/20 transition"
+            >
               <h3 className="text-xl font-semibold text-white">{p.title}</h3>
               <p className="mt-2 text-sm text-gray-400">{p.description}</p>
             </a>
@@ -102,7 +123,12 @@ export default function Home() {
         <h2 className="text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2">Skills</h2>
         <ul className="mt-6 flex flex-wrap gap-3 text-sm">
           {skills.map(s => (
-            <li key={s} className="px-4 py-2 border border-gray-700 rounded-full bg-gray-800 hover:bg-blue-500 hover:text-white transition">{s}</li>
+            <li
+              key={s}
+              className="px-4 py-2 border border-gray-700 rounded-full bg-gray-800 hover:bg-blue-500 hover:text-white transition"
+            >
+              {s}
+            </li>
           ))}
         </ul>
       </section>
@@ -112,10 +138,15 @@ export default function Home() {
         <h2 className="text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2">Education</h2>
         <div className="mt-6 space-y-6">
           {education.map(e => (
-            <div key={e.degree} className="bg-gray-800 rounded-xl shadow-md p-6 border border-gray-700 hover:shadow-lg hover:shadow-blue-500/20 transition">
+            <div
+              key={e.degree}
+              className="bg-gray-800 rounded-xl shadow-md p-6 border border-gray-700 hover:shadow-lg hover:shadow-blue-500/20 transition"
+            >
               <h3 className="text-xl font-semibold text-white">{e.degree}</h3>
               <p className="text-gray-300">{e.school}</p>
-              <p className="text-sm text-gray-400">{e.period} | {e.details}</p>
+              <p className="text-sm text-gray-400">
+                {e.period} | {e.details}
+              </p>
             </div>
           ))}
         </div>
@@ -125,7 +156,9 @@ export default function Home() {
       <section id="certifications" className="max-w-6xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2">Certifications</h2>
         <ul className="mt-6 list-disc list-inside space-y-2 text-sm text-gray-300">
-          {certifications.map(c => <li key={c}>{c}</li>)}
+          {certifications.map(c => (
+            <li key={c}>{c}</li>
+          ))}
         </ul>
       </section>
 
@@ -135,7 +168,15 @@ export default function Home() {
         <div className="mt-4 space-y-2 text-lg text-gray-300">
           <p>📍 Manvi, Raichur, India - 584120</p>
           <p>📞 +91 8867328175</p>
-          <p>✉️ <a className="underline text-blue-400" href="mailto:saikumar70598@gmail.com">saikumar70598@gmail.com</a></p>
+          <p>
+            ✉️{" "}
+            <a
+              className="underline text-blue-400"
+              href="mailto:saikumar70598@gmail.com"
+            >
+              saikumar70598@gmail.com
+            </a>
+          </p>
         </div>
       </section>
 
@@ -144,8 +185,20 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
           <p>© {new Date().getFullYear()} G Saikumar. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="http://www.linkedin.com/in/sai-kumar-b6a3142a6" target="_blank" className="hover:text-blue-400">LinkedIn</a>
-            <a href="https://github.com/21Saikumar" target="_blank" className="hover:text-blue-400">GitHub</a>
+            <a
+              href="http://www.linkedin.com/in/sai-kumar-b6a3142a6"
+              target="_blank"
+              className="hover:text-blue-400"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/21Saikumar"
+              target="_blank"
+              className="hover:text-blue-400"
+            >
+              GitHub
+            </a>
           </div>
         </div>
       </footer>
