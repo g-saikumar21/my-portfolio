@@ -9,13 +9,13 @@ export default function Home() {
       title: "AI Skin Cancer Detection",
       description:
         "CNN-based melanoma/BCC/SCC classifier with Grad-CAM explainability.",
-      link: "https://github.com/21Saikumar",
+      link: "https://github.com/g-saikumar21",
     },
     {
       title: "Online Examination System",
       description:
         "Web-based platform for conducting exams digitally, enabling administrators to manage tests and students to take exams with instant results.",
-      link: "https://github.com/21Saikumar",
+      link: "https://github.com/g-saikumar21",
     },
   ];
 
@@ -132,10 +132,10 @@ export default function Home() {
           <Link href="/resume.pdf" className="px-6 py-3 flex items-center gap-2 rounded-xl border border-gray-600 hover:bg-gray-800">
             <FileDown size={18}/> Resume
           </Link>
-          <a href="http://www.linkedin.com/in/sai-kumar-b6a3142a6" target="_blank" className="px-6 py-3 flex items-center gap-2 rounded-xl border border-gray-600 hover:bg-gray-800">
+          <a href="https://www.linkedin.com/in/g-saikumar21" target="_blank" className="px-6 py-3 flex items-center gap-2 rounded-xl border border-gray-600 hover:bg-gray-800">
             <Linkedin size={18}/> LinkedIn
           </a>
-          <a href="https://github.com/21Saikumar" target="_blank" className="px-6 py-3 flex items-center gap-2 rounded-xl border border-gray-600 hover:bg-gray-800">
+          <a href="https://github.com/g-saikumar21" target="_blank" className="px-6 py-3 flex items-center gap-2 rounded-xl border border-gray-600 hover:bg-gray-800">
             <Github size={18}/> GitHub
           </a>
         </div>
@@ -243,8 +243,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
           <p>© {new Date().getFullYear()} G Saikumar. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="http://www.linkedin.com/in/sai-kumar-b6a3142a6" target="_blank" className="hover:text-blue-400"><Linkedin size={18}/></a>
-            <a href="https://github.com/21Saikumar" target="_blank" className="hover:text-blue-400"><Github size={18}/></a>
+            <a href="https://www.linkedin.com/in/g-saikumar21" target="_blank" className="hover:text-blue-400"><Linkedin size={18}/></a>
+            <a href="https://github.com/g-saikumar21" target="_blank" className="hover:text-blue-400"><Github size={18}/></a>
             <a href="mailto:saikumar70598@gmail.com" target="_blank" className="hover:text-blue-400"><Mail size={18}/></a>
           </div>
         </div>
