@@ -34,11 +34,14 @@ export default function Home() {
     "Problem Solving",
   ];
 
+  // ✅ Updated certifications with PDF file links
   const certifications = [
-    "Basics of Python – Infosys Springboard (Feb 2024)",
-    "Python Fundamentals – Infosys Springboard (Jun–Jul 2024)",
-    "VLSI Digital Design – Infosys Springboard (Mar–Apr 2025)",
-    "Explore Machine Learning Using Python – Infosys Springboard (May 2025)",
+    { name: "Basics of Python – Infosys Springboard (Feb 2024)", file: "/certificates/Basics of Python.pdf" },
+    { name: "Python Fundamentals – Infosys Springboard (Jun–Jul 2024)", file: "/certificates/Python Fundamentals.pdf" },
+    { name: "VLSI Digital Design – Infosys Springboard (Mar–Apr 2025)", file: "/certificates/VLSI Digital Design - Chip Design and Verilog Programming.pdf" },
+    { name: "Explore Machine Learning Using Python – Infosys Springboard (May 2025)", file: "/certificates/Explore Machine Learning using Python.pdf" },
+    { name: "TypeScript – Infosys Springboard (2025)", file: "/certificates/TypeScript.pdf" },
+    { name: "Time Management – Infosys Springboard (2025)", file: "/certificates/Time Management.pdf" },
   ];
 
   const education = [
@@ -185,8 +188,11 @@ export default function Home() {
         <h2 className="text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2">Certifications</h2>
         <ul className="mt-6 space-y-3 text-gray-300">
           {certifications.map(c => (
-            <li key={c} className="flex items-center gap-2">
-              <span className="text-blue-400">✔</span> {c}
+            <li key={c.name} className="flex items-center gap-2">
+              <span className="text-blue-400">✔</span>
+              <a href={c.file} target="_blank" className="underline hover:text-blue-400">
+                {c.name}
+              </a>
             </li>
           ))}
         </ul>
