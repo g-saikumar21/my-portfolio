@@ -34,7 +34,6 @@ export default function Home() {
     "Problem Solving",
   ];
 
-  // ✅ Updated certifications with PDF file links
   const certifications = [
     { name: "Basics of Python – Infosys Springboard (Feb 2024)", file: "/certificates/Basics of Python.pdf" },
     { name: "Python Fundamentals – Infosys Springboard (Jun–Jul 2024)", file: "/certificates/Python Fundamentals.pdf" },
@@ -55,13 +54,13 @@ export default function Home() {
       degree: "Pre-University Course (PUC)",
       school: "New Sri Chaitanya P.U College, Bellari",
       period: "2020 – 2022",
-      details: "Percentage: 82.83%",
+      details: "Percentage: 82%",
     },
     {
       degree: "SSLC",
       school: "Sri Vellanki Ramakrishna Varma High School, Manvi",
       period: "2020",
-      details: "Percentage: 83.2%",
+      details: "Percentage: 83%",
     },
   ];
 
@@ -183,19 +182,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CERTIFICATIONS */}
+      {/* CERTIFICATIONS (box format) */}
       <section id="certifications" className="max-w-6xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2">Certifications</h2>
-        <ul className="mt-6 space-y-3 text-gray-300">
+        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map(c => (
-            <li key={c.name} className="flex items-center gap-2">
-              <span className="text-blue-400">✔</span>
-              <a href={c.file} target="_blank" className="underline hover:text-blue-400">
-                {c.name}
-              </a>
-            </li>
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              key={c.name}
+              href={c.file}
+              target="_blank"
+              className="block rounded-xl p-5 border border-gray-700 bg-gray-900 hover:shadow-xl hover:shadow-blue-500/20 transition"
+            >
+              <h3 className="text-lg font-semibold text-white">{c.name}</h3>
+              <p className="text-sm text-gray-400 mt-2">View Certificate</p>
+            </motion.a>
           ))}
-        </ul>
+        </div>
       </section>
 
       {/* CONTACT */}
