@@ -17,6 +17,12 @@ export default function Home() {
         "Web-based platform for conducting exams digitally, enabling administrators to manage tests and students to take exams with instant results.",
       link: "https://github.com/g-saikumar21",
     },
+    {
+      title: "Courier Management System",
+      description:
+        "PHP + MySQL based courier management system for handling parcels, tracking deliveries, managing branches, staff, and generating reports. Includes parcel status updates and printable parcel details.",
+      link: "https://github.com/g-saikumar21/courier-management-system-updated", // ✅ GitHub repo
+    },
   ];
 
   const skills = [
@@ -205,7 +211,6 @@ export default function Home() {
       <section id="contact" className="max-w-6xl mx-auto px-6 py-16 text-center">
         <h2 className="text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2">Contact</h2>
         <div className="mt-6 flex flex-col gap-3 text-lg text-gray-300 items-center">
-          <p className="flex items-center gap-2"><MapPin size={18}/> Manvi, Raichur, India - 584120</p>
           <p className="flex items-center gap-2"><Phone size={18}/> +91 8867328175</p>
           <p className="flex items-center gap-2"><Mail size={18}/> 
             <a href="mailto:saikumar70598@gmail.com" className="underline text-blue-400">saikumar70598@gmail.com</a>
