@@ -14,42 +14,43 @@ export default function Home() {
     {
       title: "Courier Management System",
       description:
-        "PHP + MySQL system for courier tracking, parcel updates, and branch management.",
+        "PHP + MySQL courier system for managing parcels, tracking deliveries, branches, and staff.",
       link: "https://github.com/g-saikumar21/courier-management-system",
     },
     {
       title: "Online Examination System",
       description:
-        "Web platform for digital exams with admin and student features.",
+        "Web-based platform for conducting exams digitally with instant results.",
       link: "https://github.com/g-saikumar21",
     },
   ];
 
-  // ✅ Correct logos set
+  // ✅ Skills with visible colored icons and white border on highlighted icons
   const skills = {
-    "Technical Skills": [
-      { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
-      { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
-      { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-      { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-      { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-      { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-      { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+    technical: [
+      { name: "C", logo: "https://img.icons8.com/color/48/c-programming.png" },
+      { name: "C++", logo: "https://img.icons8.com/color/48/c-plus-plus-logo.png" },
+      { name: "Python", logo: "https://img.icons8.com/color/48/python.png" },
+      { name: "Java", logo: "https://img.icons8.com/color/48/java-coffee-cup-logo.png" },
+      { name: "HTML", logo: "https://img.icons8.com/color/48/html-5.png" },
+      { name: "CSS", logo: "https://img.icons8.com/color/48/css3.png" },
+      { name: "SQL (MySQL)", logo: "https://img.icons8.com/color/48/mysql-logo.png" },
     ],
-    "Tools": [
-      { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-      { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", bordered: true },
-      { name: "VS Code", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-      { name: "MySQL Workbench", logo: "https://cdn-icons-png.flaticon.com/512/4248/4248443.png" },
+    tools: [
+      { name: "Git", logo: "https://img.icons8.com/color/48/git.png" },
+      { name: "GitHub", logo: "https://img.icons8.com/color/48/github.png", highlight: true },
+      { name: "Vercel", logo: "https://img.icons8.com/color/48/vercel.png", highlight: true },
+      { name: "VS Code", logo: "https://img.icons8.com/color/48/visual-studio-code-2019.png" },
+      { name: "MySQL Workbench", logo: "https://img.icons8.com/color/48/mysql-logo.png" },
     ],
-    "Concepts": [
-      { name: "Machine Learning", logo: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png" }, // ✅ AI/Brain logo
-      { name: "Data Structures & Algorithms", logo: "https://cdn-icons-png.flaticon.com/512/2621/2621040.png" },
+    concepts: [
+      { name: "Machine Learning", logo: "https://img.icons8.com/color/48/artificial-intelligence.png", highlight: true },
+      { name: "Data Structures & Algorithms", logo: "https://img.icons8.com/color/48/data-configuration.png", highlight: true },
     ],
-    "Soft Skills": [
-      { name: "Leadership", logo: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png" },
-      { name: "Teamwork", logo: "https://cdn-icons-png.flaticon.com/512/1256/1256650.png" }, // ✅ group of people
-      { name: "Problem Solving", logo: "https://cdn-icons-png.flaticon.com/512/4257/4257483.png", bordered: true }, // ✅ only this one stays bordered
+    soft: [
+      { name: "Leadership", logo: "https://img.icons8.com/color/48/leadership.png", highlight: true },
+      { name: "Teamwork", logo: "https://img.icons8.com/color/48/conference.png", highlight: true },
+      {  name: "Problem Solving", logo: "https://img.icons8.com/?size=60&id=GsbULMQg5TS8&format=png", highlight: true },
     ],
   };
 
@@ -92,7 +93,9 @@ export default function Home() {
       {/* NAV */}
       <header className="sticky top-0 bg-gray-950/80 backdrop-blur-md border-b border-gray-800 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="font-bold text-xl text-white">G Saikumar</Link>
+          <Link href="/" className="font-bold text-xl text-white">
+            G Saikumar
+          </Link>
           <nav className="flex gap-6 text-sm font-medium">
             <Link href="#about" className="hover:text-blue-400">About</Link>
             <Link href="#projects" className="hover:text-blue-400">Projects</Link>
@@ -106,8 +109,8 @@ export default function Home() {
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 py-20 text-center">
-        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl font-extrabold leading-tight">
+        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }} className="text-5xl md:text-6xl font-extrabold leading-tight">
           Hi, I’m <span className="text-blue-400">G Saikumar</span>
         </motion.h1>
         <p className="mt-4 text-xl text-gray-300">
@@ -119,16 +122,16 @@ export default function Home() {
           eager to contribute to impactful projects.
         </p>
         <div className="mt-8 flex gap-4 flex-wrap justify-center">
-          <Link href="#projects" className="px-6 py-3 rounded-xl bg-blue-500 text-white hover:bg-blue-600">View Projects</Link>
+          <Link href="#projects" className="px-6 py-3 rounded-xl bg-blue-500 text-white hover:bg-blue-600">
+            View Projects
+          </Link>
           <Link href="/resume.pdf" className="px-6 py-3 flex items-center gap-2 rounded-xl border border-gray-600 hover:bg-gray-800">
             <FileDown size={18}/> Resume
           </Link>
-          <a href="https://www.linkedin.com/in/g-saikumar21/" target="_blank"
-            className="px-6 py-3 flex items-center gap-2 rounded-xl border border-gray-600 hover:bg-gray-800">
+          <a href="https://www.linkedin.com/in/g-saikumar21/" target="_blank" className="px-6 py-3 flex items-center gap-2 rounded-xl border border-gray-600 hover:bg-gray-800">
             <Linkedin size={18}/> LinkedIn
           </a>
-          <a href="https://github.com/g-saikumar21" target="_blank"
-            className="px-6 py-3 flex items-center gap-2 rounded-xl border border-gray-600 hover:bg-gray-800">
+          <a href="https://github.com/g-saikumar21" target="_blank" className="px-6 py-3 flex items-center gap-2 rounded-xl border border-gray-600 hover:bg-gray-800">
             <Github size={18}/> GitHub
           </a>
         </div>
@@ -162,20 +165,24 @@ export default function Home() {
       <section id="skills" className="max-w-6xl mx-auto px-6 py-16">
         <h2 className="text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2">Skills</h2>
         <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {Object.entries(skills).map(([category, items]) => (
+          {Object.entries(skills).map(([category, list]) => (
             <div key={category}>
-              <h3 className="text-xl font-semibold text-white mb-4">{category}</h3>
-              <div className="flex flex-col gap-3">
-                {items.map(s => (
-                  <motion.div whileHover={{ scale: 1.05 }} key={s.name}
+              <h3 className="text-xl font-semibold text-white mb-4">
+                {category === "technical" ? "Technical Skills" :
+                 category === "tools" ? "Tools" :
+                 category === "concepts" ? "Concepts" : "Soft Skills"}
+              </h3>
+              <ul className="flex flex-col gap-3 text-sm">
+                {list.map(s => (
+                  <motion.li whileHover={{ scale: 1.05 }} key={s.name}
                     className="flex items-center gap-3 px-4 py-2 border border-gray-700 rounded-lg bg-gray-900 hover:bg-blue-500 hover:text-white transition">
-                    <div className={`flex items-center justify-center w-8 h-8 rounded-full ${s.bordered ? "bg-white p-1 border" : ""}`}>
+                    <div className={`flex items-center justify-center w-10 h-10 rounded-full p-1 bg-gray-800 ${s.highlight ? "border-2 border-white" : ""}`}>
                       <img src={s.logo} alt={s.name} className="w-7 h-7 object-contain" />
                     </div>
                     <span>{s.name}</span>
-                  </motion.div>
+                  </motion.li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>
@@ -190,7 +197,9 @@ export default function Home() {
               className="bg-gray-900 rounded-xl shadow-md p-6 border border-gray-700 hover:shadow-lg hover:shadow-blue-500/20 transition">
               <h3 className="text-xl font-semibold text-white">{e.degree}</h3>
               <p className="text-gray-300">{e.school}</p>
-              <p className="text-sm text-gray-400">{e.period} | {e.details}</p>
+              <p className="text-sm text-gray-400">
+                {e.period} | {e.details}
+              </p>
             </motion.div>
           ))}
         </div>
