@@ -3,6 +3,13 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Phone, FileDown } from "lucide-react";
 
+// ✅ TypeScript type for skills
+type Skill = {
+  name: string;
+  logo: string;
+  highlight?: boolean; // optional property
+};
+
 export default function Home() {
   const projects = [
     {
@@ -25,8 +32,8 @@ export default function Home() {
     },
   ];
 
-  // ✅ Skills with visible colored icons and white border on highlighted icons
-  const skills = {
+  // ✅ Skills with highlight property (TypeScript-safe)
+  const skills: Record<string, Skill[]> = {
     technical: [
       { name: "C", logo: "https://img.icons8.com/color/48/c-programming.png" },
       { name: "C++", logo: "https://img.icons8.com/color/48/c-plus-plus-logo.png" },
@@ -50,7 +57,7 @@ export default function Home() {
     soft: [
       { name: "Leadership", logo: "https://img.icons8.com/color/48/leadership.png", highlight: true },
       { name: "Teamwork", logo: "https://img.icons8.com/color/48/conference.png", highlight: true },
-      {  name: "Problem Solving", logo: "https://img.icons8.com/?size=60&id=GsbULMQg5TS8&format=png", highlight: true },
+      { name: "Problem Solving", logo: "https://img.icons8.com/?size=60&id=GsbULMQg5TS8&format=png", highlight: true },
     ],
   };
 
