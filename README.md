@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Personal Portfolio – G Saikumar
 
-## Getting Started
+This is my personal portfolio website built with **Next.js, Tailwind CSS, and Framer Motion**.  
+It showcases my projects, skills, certifications, and education in a clean and professional format.  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔹 Features
+- 🎯 **About Me** – A short introduction and background  
+- 💻 **Projects** – Showcases my academic and personal projects  
+- 🛠 **Skills** – Categorized technical, tools, concepts, and soft skills with icons  
+- 🎓 **Education** – Academic background with CGPA and percentages  
+- 📜 **Certifications** – Includes Infosys Springboard, Microsoft Azure certifications, and more  
+- 📞 **Contact Section** – Easy access to reach me via LinkedIn, GitHub, and Email  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔹 Tech Stack
+- **Framework:** Next.js  
+- **Styling:** Tailwind CSS  
+- **Animations:** Framer Motion  
+- **Icons:** Lucide Icons, Icons8  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🔹 Installation & Setup
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/g-saikumar21/my-portfolio.git
+   ```
+2. Navigate into the project directory  
+   ```bash
+   cd my-portfolio
+   ```
+3. Install dependencies  
+   ```bash
+   npm install
+   ```
+4. Run the development server  
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔹 Future Enhancements
+- 🌙 Dark/Light mode toggle  
+- 🌍 Add blog section to share insights and experiences  
+- 📈 Integrate analytics to track visits and interactions  
+- 🚀 Add more animations and project demos  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔹 Author
+👨‍💻 G Saikumar  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 🌐 Portfolio: [gsaikumar.vercel.app](https://gsaikumar.vercel.app)  
+- 🔗 LinkedIn: [linkedin.com/in/g-saikumar21](https://www.linkedin.com/in/g-saikumar21)  
+- 💻 GitHub: [github.com/g-saikumar21](https://github.com/g-saikumar21)  
+- 📧 Email: [saikumar70598@gmail.com](mailto:saikumar70598@gmail.com)  
