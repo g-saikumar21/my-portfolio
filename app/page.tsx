@@ -61,17 +61,22 @@ export default function Home() {
     ],
   };
 
+  // ✅ Certifications (Prompt Engineering + Microsoft first)
   const certifications = [
+    {
+      name: "Prompt Engineering – Infosys Springboard (2025)",
+      file: "/certificates/Prompt_Engineering.pdf",
+    },
+    {
+      name: "Microsoft Certifications – Azure, AI, and Security Fundamentals (2025)",
+      file: "/certificates/Microsoft Azure Learning/Microsoft_Certifications.pdf",
+    },
     { name: "Basics of Python – Infosys Springboard (Feb 2024)", file: "/certificates/Basics of Python.pdf" },
     { name: "Python Fundamentals – Infosys Springboard (Jun–Jul 2024)", file: "/certificates/Python Fundamentals.pdf" },
     { name: "VLSI Digital Design – Infosys Springboard (Mar–Apr 2025)", file: "/certificates/VLSI Digital Design - Chip Design and Verilog Programming.pdf" },
     { name: "Explore Machine Learning Using Python – Infosys Springboard (May 2025)", file: "/certificates/Explore Machine Learning using Python.pdf" },
     { name: "TypeScript – Infosys Springboard (2025)", file: "/certificates/TypeScript.pdf" },
     { name: "Time Management – Infosys Springboard (2025)", file: "/certificates/Time Management.pdf" },
-    {
-      name: "Microsoft Certifications – Azure, AI, and Security Fundamentals (2025)",
-      file: "/certificates/Microsoft Azure Learning/Microsoft_Certifications.pdf",
-    },
   ];
 
   const education = [
