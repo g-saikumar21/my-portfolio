@@ -46,19 +46,19 @@ export default function Home() {
     ],
     tools: [
       { name: "Git", logo: "https://img.icons8.com/color/48/git.png" },
-      { name: "GitHub", logo: "https://img.icons8.com/color/48/github.png", highlight: true },
-      { name: "Vercel", logo: "https://img.icons8.com/color/48/vercel.png", highlight: true },
+      { name: "GitHub", logo: "https://img.icons8.com/color/48/github.png" },
+      { name: "Vercel", logo: "https://img.icons8.com/color/48/vercel.png" },
       { name: "VS Code", logo: "https://img.icons8.com/color/48/visual-studio-code-2019.png" },
       { name: "MySQL Workbench", logo: "https://img.icons8.com/color/48/mysql-logo.png" },
     ],
     concepts: [
-      { name: "Machine Learning", logo: "https://img.icons8.com/color/48/artificial-intelligence.png", highlight: true },
-      { name: "Data Structures & Algorithms", logo: "https://img.icons8.com/color/48/data-configuration.png", highlight: true },
+      { name: "Machine Learning", logo: "https://img.icons8.com/color/48/artificial-intelligence.png" },
+      { name: "Data Structures & Algorithms", logo: "https://img.icons8.com/color/48/data-configuration.png" },
     ],
     soft: [
-      { name: "Leadership", logo: "https://img.icons8.com/color/48/leadership.png", highlight: true },
-      { name: "Teamwork", logo: "https://img.icons8.com/color/48/conference.png", highlight: true },
-      { name: "Problem Solving", logo: "https://img.icons8.com/?size=60&id=GsbULMQg5TS8&format=png", highlight: true },
+      { name: "Leadership", logo: "https://img.icons8.com/color/48/leadership.png" },
+      { name: "Teamwork", logo: "https://img.icons8.com/color/48/conference.png" },
+      { name: "Problem Solving", logo: "https://img.icons8.com/?size=60&id=GsbULMQg5TS8&format=png" },
     ],
   };
 
@@ -79,14 +79,13 @@ export default function Home() {
     { degree: "SSLC", school: "Sri Vellanki Ramakrishna Varma High School, Manvi", period: "2020", details: "Percentage: 83%" },
   ];
 
-  // Light mode styles
   const lightBg = 'bg-gradient-to-br from-pink-50 via-yellow-50 to-green-50';
-  const lightCard = 'bg-white/60 backdrop-blur-md border border-gray-200 shadow-md hover:shadow-xl hover:shadow-pink-300/50 transition-transform';
+  const lightCard = 'bg-white/60 backdrop-blur-md border border-gray-200 shadow-md hover:shadow-xl transition-all duration-300 ease-in-out';
   const lightText = 'text-gray-900';
   const lightSubText = 'text-gray-700';
 
   return (
-    <main className={`${darkMode ? 'bg-gray-950 text-gray-100' : lightBg + ' ' + lightText} transition-colors duration-500 min-h-screen`}>
+    <main className={`${darkMode ? 'bg-gray-950 text-gray-100' : lightBg + ' ' + lightText} transition-colors duration-500 min-h-screen scroll-smooth`}>
 
       {/* NAV */}
       <header className={`${darkMode ? 'bg-gray-950/80 border-gray-800' : 'bg-white/60 border-gray-200'} sticky top-0 backdrop-blur-md border-b z-50 transition-colors duration-500`}>
@@ -115,34 +114,65 @@ export default function Home() {
           Hi, I’m <span className="text-blue-400">G Saikumar</span>
         </motion.h1>
         <p className={`mt-4 text-xl ${darkMode ? 'text-gray-300' : lightSubText}`}>Aspiring Full-Stack Developer | AI/ML Enthusiast</p>
+
+        {/* HERO ACTION CARDS */}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-center max-w-4xl mx-auto">
+          {[
+            { href: "/resume.pdf", icon: <FileDown size={20}/>, text: "Resume" },
+            { href: "https://github.com/g-saikumar21", icon: <Github size={20}/>, text: "GitHub" },
+            { href: "https://www.linkedin.com/in/g-saikumar21/", icon: <Linkedin size={20}/>, text: "LinkedIn" },
+            { href: "mailto:saikumar70598@gmail.com", icon: <Mail size={20}/>, text: "Email" }
+          ].map((item) => (
+            <a key={item.text} href={item.href} target="_blank"
+              className={`${darkMode ? 'bg-gray-900 border-gray-700 hover:shadow-blue-500/20' : lightCard + ' ' + lightText} flex items-center justify-center gap-2 py-4 px-5 rounded-lg transition-all duration-300 ease-in-out`}>
+              {item.icon}
+              <span className="font-medium">{item.text}</span>
+            </a>
+          ))}
+        </div>
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="max-w-5xl mx-auto px-6 py-16 text-center">
+      <motion.section id="about" className="max-w-5xl mx-auto px-6 py-16 text-center"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <h2 className={`text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2 ${darkMode ? 'text-white' : lightText}`}>About Me</h2>
         <p className={`mt-6 text-lg leading-relaxed ${darkMode ? 'text-gray-300' : lightSubText}`}>
           I am a Computer Science student with experience in building projects using
           modern technologies like <span className="text-blue-400">AI/ML, Web Development, and Data Structures</span>.
           I enjoy working on challenging problems and contributing to impactful solutions.
         </p>
-      </section>
+      </motion.section>
 
       {/* PROJECTS */}
-      <section id="projects" className="max-w-6xl mx-auto px-6 py-16">
+      <motion.section id="projects" className="max-w-6xl mx-auto px-6 py-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <h2 className={`text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2 ${darkMode ? 'text-white' : lightText}`}>Projects</h2>
         <div className="mt-8 grid md:grid-cols-2 gap-8">
           {projects.map(p => (
             <motion.a whileHover={{ scale: 1.05, boxShadow: darkMode ? '0 0 15px rgba(59,130,246,0.4)' : '0 0 15px rgba(249,168,212,0.5)' }} key={p.title} href={p.link} target="_blank"
-              className={`${darkMode ? 'bg-gray-900 border-gray-700 hover:shadow-blue-500/20' : lightCard + ' ' + lightText} block rounded-xl p-6 border transition-all duration-500`}>
-              <h3 className={`${darkMode ? 'text-white' : lightText} text-xl font-semibold transition-colors duration-500`}>{p.title}</h3>
-              <p className={`${darkMode ? 'text-gray-400' : lightSubText} mt-2 text-sm transition-colors duration-500`}>{p.description}</p>
+              className={`${darkMode ? 'bg-gray-900 border-gray-700 hover:shadow-blue-500/20' : lightCard + ' ' + lightText} block rounded-xl p-6 border transition-all duration-300 ease-in-out`}>
+              <h3 className={`${darkMode ? 'text-white' : lightText} text-xl font-semibold`}>{p.title}</h3>
+              <p className={`${darkMode ? 'text-gray-400' : lightSubText} mt-2 text-sm`}>{p.description}</p>
             </motion.a>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* SKILLS */}
-      <section id="skills" className="max-w-6xl mx-auto px-6 py-16">
+      <motion.section id="skills" className="max-w-6xl mx-auto px-6 py-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <h2 className={`text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2 ${darkMode ? 'text-white' : lightText}`}>Skills</h2>
         <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {Object.entries(skills).map(([category, list]) => (
@@ -155,7 +185,7 @@ export default function Home() {
               <ul className="flex flex-col gap-3 text-sm">
                 {list.map(s => (
                   <motion.li whileHover={{ scale: 1.05, boxShadow: darkMode ? '0 0 10px rgba(59,130,246,0.5)' : '0 0 10px rgba(249,168,212,0.5)' }} key={s.name}
-                    className={`${darkMode ? 'bg-gray-900 border-gray-700 hover:bg-blue-900 hover:text-white' : 'flex items-center gap-3 px-4 py-2 rounded-lg border bg-white/60 backdrop-blur-md'} flex items-center gap-3 transition-all duration-500`}>
+                    className={`${darkMode ? 'bg-gray-900 border-gray-700 hover:bg-blue-900 hover:text-white' : 'flex items-center gap-3 px-4 py-2 rounded-lg border bg-white/60 backdrop-blur-md'} flex items-center gap-3 transition-all duration-300 ease-in-out`}>
                     <div className={`flex items-center justify-center w-10 h-10 rounded-full p-1 ${darkMode ? 'bg-gray-800' : 'bg-white/70'} ${s.highlight ? 'border-2 border-white' : ''}`}>
                       <img src={s.logo} alt={s.name} className="w-7 h-7 object-contain" />
                     </div>
@@ -166,15 +196,20 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* EDUCATION */}
-      <section id="education" className="max-w-6xl mx-auto px-6 py-16">
+      <motion.section id="education" className="max-w-6xl mx-auto px-6 py-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <h2 className={`text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2 ${darkMode ? 'text-white' : lightText}`}>Education</h2>
         <div className="mt-6 space-y-6">
           {education.map(e => (
             <motion.div whileHover={{ scale: 1.02, boxShadow: darkMode ? '0 0 15px rgba(59,130,246,0.4)' : '0 0 15px rgba(249,168,212,0.3)' }} key={e.degree}
-              className={`${darkMode ? 'bg-gray-900 border-gray-700 hover:shadow-blue-500/20' : lightCard + ' ' + lightText} rounded-xl shadow-md p-6 border transition-all duration-500`}>
+              className={`${darkMode ? 'bg-gray-900 border-gray-700 hover:shadow-blue-500/20' : lightCard + ' ' + lightText} rounded-xl shadow-md p-6 border transition-all duration-300 ease-in-out`}>
               <h3 className={`${darkMode ? 'text-white' : lightText} text-xl font-semibold`}>{e.degree}</h3>
               <p className={`${darkMode ? 'text-gray-300' : lightSubText}`}>{e.school}</p>
               <p className={`${darkMode ? 'text-gray-400' : lightSubText} text-sm`}>
@@ -183,24 +218,34 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* CERTIFICATIONS */}
-      <section id="certifications" className="max-w-6xl mx-auto px-6 py-16">
+      <motion.section id="certifications" className="max-w-6xl mx-auto px-6 py-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <h2 className={`text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2 ${darkMode ? 'text-white' : lightText}`}>Certifications</h2>
         <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map(c => (
             <motion.a whileHover={{ scale: 1.05, boxShadow: darkMode ? '0 0 15px rgba(59,130,246,0.4)' : '0 0 15px rgba(249,168,212,0.3)' }} key={c.name} href={c.file} target="_blank"
-              className={`${darkMode ? 'bg-gray-900 border-gray-700 hover:shadow-blue-500/20' : lightCard + ' ' + lightText} block rounded-xl p-5 border transition-all duration-500`}>
+              className={`${darkMode ? 'bg-gray-900 border-gray-700 hover:shadow-blue-500/20' : lightCard + ' ' + lightText} block rounded-xl p-5 border transition-all duration-300 ease-in-out`}>
               <h3 className={`${darkMode ? 'text-white' : lightText} text-lg font-semibold`}>{c.name}</h3>
               <p className={`${darkMode ? 'text-gray-400' : lightSubText} mt-2 text-sm`}>View Certificate</p>
             </motion.a>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* CONTACT */}
-      <section id="contact" className="max-w-6xl mx-auto px-6 py-16 text-center">
+      <motion.section id="contact" className="max-w-6xl mx-auto px-6 py-16 text-center"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+      >
         <h2 className={`text-3xl font-semibold border-b-2 border-blue-500 inline-block pb-2 ${darkMode ? 'text-white' : lightText}`}>Contact</h2>
         <div className="mt-6 flex flex-col gap-3 text-lg items-center">
           <p className="flex items-center gap-2"><Phone size={18}/> +91 8867328175</p>
@@ -208,7 +253,7 @@ export default function Home() {
             <a href="mailto:saikumar70598@gmail.com" className="underline text-blue-400">saikumar70598@gmail.com</a>
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* FOOTER */}
       <footer className={`${darkMode ? 'bg-gray-950 border-gray-800 text-gray-400' : 'bg-white/60 border-gray-200 text-gray-700'} border-t mt-12 transition-colors duration-500`}>
