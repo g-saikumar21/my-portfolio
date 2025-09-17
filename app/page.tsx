@@ -122,7 +122,7 @@ export default function Home() {
       </section>
 
       {/* FOUR HIGHLIGHT BOXES BELOW HERO (CENTERED CONTENT) */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pb-16 flex flex-col gap-6 md:flex-row md:justify-center md:items-stretch">
         {/* Resume */}
         <motion.a
           href="/resume.pdf"
