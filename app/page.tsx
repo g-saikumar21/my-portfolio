@@ -147,7 +147,7 @@ export default function Home() {
 
         {/* LinkedIn */}
         <motion.a
-          href="https://linkedin.com/in/saikumar"
+          href="https://www.linkedin.com/in/g-saikumar21"
           target="_blank"
           whileHover={{ scale: 1.05, boxShadow: darkMode ? '0 0 15px rgba(59,130,246,0.4)' : '0 0 15px rgba(249,168,212,0.5)' }}
           className={`${darkMode ? 'bg-gray-900 border-gray-700 hover:shadow-blue-500/20' : lightCard + ' ' + lightText} flex flex-col items-center justify-center rounded-xl p-5 sm:p-6 border transition-all duration-500`}
